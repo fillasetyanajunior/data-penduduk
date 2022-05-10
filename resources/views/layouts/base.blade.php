@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="{{url('dist/img/pendudukdesa.png')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{url('dist/img/pendudukdesa.png')}}" type="image/x-icon"/>
     <title>@yield('title') - {{env('APP_NAME')}}</title>
     <!-- CSS files -->
     <link href="{{url('dist/css/tabler.min.css')}}" rel="stylesheet" />
