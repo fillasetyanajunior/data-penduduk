@@ -14,6 +14,6 @@ class LogoutController extends AppController
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect()->route('login.form')->with(['error' => "Logout Successfully"]);
+        return redirect('/')->with(['error' => "Logout Successfully"]);
     }
 }
