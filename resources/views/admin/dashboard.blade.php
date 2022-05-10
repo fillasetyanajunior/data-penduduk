@@ -2,7 +2,7 @@
 @section('title',$title)
 @section('content')
 <div class="page">
-    <x-slidebar-admin></x-slidebar-admin>
+    <x-slidebar-admin :title="$title"></x-slidebar-admin>
     <div class="page-wrapper">
         <div class="container-xl">
             <div class="page-header d-print-none">

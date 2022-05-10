@@ -2,7 +2,7 @@
 @section('title',$title)
 @section('content')
 <div class="page">
-    <x-slidebar-admin></x-slidebar-admin>
+    <x-slidebar-admin :title="$title"></x-slidebar-admin>
     @livewire('data-pindah-penduduk-livewire', ['title' => $title])
     <x-footer></x-footer>
 </div>

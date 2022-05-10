@@ -8,8 +8,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-                <a href=".">
-                    <img src="./static/logo.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+                <a href="/">
+                    <img src="{{url('dist/img/pendudukdesa.png')}}" width="110" height="32" alt="Tabler" class="navbar-brand-image">
                 </a>
             </h1>
         </div>
@@ -90,8 +90,7 @@
                 @else
                 <div class="card">
                     <div class="empty">
-                        <div class="empty-img"><img src="{{url('static/illustrations/undraw_quitting_time_dm8t.svg')}}"
-                                height="128" alt="">
+                        <div class="empty-img"><img src="{{url('static/illustrations/undraw_quitting_time_dm8t.svg')}}" height="128" alt="">
                         </div>
                         <p class="empty-title">No results found</p>
                         <p class="empty-subtitle text-muted">
