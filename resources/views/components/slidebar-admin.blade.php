@@ -53,7 +53,7 @@
         <div class="navbar navbar-light">
             <div class="container-xl">
                 <ul class="navbar-nav">
-                    <li class="nav-item active">
+                    <li class="nav-item @if ($title == 'Admin Page') active @endif">
                         <a class="nav-link" href="{{route('dashboard')}}">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
@@ -69,7 +69,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if ($title == 'Data Penduduk') active @endif">
                         <a class="nav-link" href="{{route('penduduk')}}">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
@@ -85,7 +85,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if ($title == 'Data Pindah Penduduk') active @endif">
                         <a class="nav-link" href="{{route('pindahpenduduk')}}">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-minus"
@@ -102,7 +102,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item @if ($title == 'Data Kematian Penduduk') active @endif">
                         <a class="nav-link" href="{{route('kematianpenduduk')}}">
                             <span class="nav-link-icon d-md-none d-lg-inline-block">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-x"
