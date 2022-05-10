@@ -4,7 +4,7 @@
 <div class="page page-center">
     <div class="container-tight py-4">
         <div class="text-center mb-4">
-            <a href="." class="navbar-brand navbar-brand-autodark"><img src="./static/logo.svg" height="36" alt=""></a>
+            <a href="" class="navbar-brand navbar-brand-autodark"><img src="{{url('dist/img/pendudukdesa.png')}}" height="40" alt=""></a>
         </div>
         <form class="card card-md" action="{{route('login.post')}}" method="POST" autocomplete="off">
             @csrf
