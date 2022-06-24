@@ -60,31 +60,33 @@
             <div class="container-xl">
                 <div class="row">
                     <div class="col-lg-12">
-                        <form action="" method="get">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h3>Kepala Desa dan Wakil Kepala Desa</h3>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row g-2">
-                                        @foreach ($daftarpemilih as $showdaftarpemilih)
-                                        <div class="col-6 col-sm-4">
+                        <form action="{{route('voterlist.vote')}}" method="post">
+                            @csrf
+                            <div class="row g-2">
+                                @foreach ($daftarpemilih as $showdaftarpemilih)
+                                <div class="col-6 col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
                                             <label class="form-imagecheck mb-2">
                                                 <input name="vote" type="radio" value="{{$showdaftarpemilih->id}}"
                                                     class="form-imagecheck-input" />
                                                 <span class="form-imagecheck-figure">
-                                                    <img src="{{Storage::url($showdaftarpemilih->thumnail)}}"
+                                                    <img src="{{Storage::url($showdaftarpemilih->thumnail)}}" width="500px"
                                                         class="form-imagecheck-image">
                                                 </span>
                                             </label>
                                             <h3>{{$showdaftarpemilih->nama}}</h3>
                                             <hr>
                                             <h3>Visi Misi</h3>
-                                            <p>{!!nl2br(str_replace("{}", " \n", $showdaftarpemilih->description))!!}</p>
+                                            <p>{!!nl2br(str_replace("{}", " \n", $showdaftarpemilih->description))!!}
+                                            </p>
                                         </div>
-                                        @endforeach
                                     </div>
                                 </div>
+                                @endforeach
+                            </div>
+                            <div class="d-flex">
+                                <button type="submit" class="btn btn-primary ms-auto">Pilih</button>
                             </div>
                         </form>
                     </div>

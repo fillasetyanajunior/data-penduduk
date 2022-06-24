@@ -44,6 +44,7 @@ Route::get('/managementuser',[ManagemenUserPemilih::class,'index'])->name('manag
 Route::get('/managementuser/store',[ManagemenUserPemilih::class,'store'])->name('managementuser.store');
 //Daftar Pemilih
 Route::get('/voterlist', [VoterList::class, 'index'])->name('voterlist');
+Route::post('/voterlist',[VoterList::class, 'store'])->name('voterlist.vote');
 //Penduduk
 Route::get('/penduduk', [Penduduk::class, 'index'])->name('penduduk');
 Route::post('/penduduk', [Penduduk::class, 'store'])->name('penduduk.store');
