@@ -50,7 +50,7 @@
                             Overview
                         </div>
                         <h2 class="page-title">
-                            Home
+                            Daftar Pemilih
                         </h2>
                     </div>
                 </div>
@@ -59,22 +59,30 @@
         <div class="page-body">
             <div class="container-xl">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <form action="{{route('home.pencarian')}}" method="get">
+                    <div class="col-lg-12">
+                        <form action="" method="get">
                             <div class="card">
+                                <div class="card-header">
+                                    <h3>Kepala Desa dan Wakil Kepala Desa</h3>
+                                </div>
                                 <div class="card-body">
-                                    <div class="mb-3">
-                                        <div class="form-label">Nama</div>
-                                        <input type="text" name="nama" class="form-control" autocomplete="off" />
-                                    </div>
-                                    <div class="mb-3">
-                                        <div class="form-label">NIK</div>
-                                        <input type="text" class="form-control" name="nik" autocomplete="off">
-                                    </div>
-                                    <div class="mt-2">
-                                        <button type="submit" class="btn btn-primary">
-                                            Search
-                                        </button>
+                                    <div class="row g-2">
+                                        @foreach ($daftarpemilih as $showdaftarpemilih)
+                                        <div class="col-6 col-sm-4">
+                                            <label class="form-imagecheck mb-2">
+                                                <input name="vote" type="radio" value="{{$showdaftarpemilih->id}}"
+                                                    class="form-imagecheck-input" />
+                                                <span class="form-imagecheck-figure">
+                                                    <img src="{{Storage::url($showdaftarpemilih->thumnail)}}"
+                                                        class="form-imagecheck-image">
+                                                </span>
+                                            </label>
+                                            <h3>{{$showdaftarpemilih->nama}}</h3>
+                                            <hr>
+                                            <h3>Visi Misi</h3>
+                                            <p>{!!nl2br(str_replace("{}", " \n", $showdaftarpemilih->description))!!}</p>
+                                        </div>
+                                        @endforeach
                                     </div>
                                 </div>
                             </div>

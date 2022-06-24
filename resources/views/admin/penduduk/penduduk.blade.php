@@ -305,26 +305,26 @@
 
                 $('select[name="provinsi"]').trigger('change');
 
-                $('input[name="nkk"]').val({{old('nkk')}});
-                $('input[name="nik"]').val({{old('nik')}});
-                $('input[name="nama"]').val({{old('nama')}});
-                $('input[name="tempat_lahir"]').val({{old('tempat_lahir')}});
-                $('input[name="tanggal_lahir"]').val({{old('tanggal_lahir')}});
-                $('select[name="jenis_kelamin"]').val({{old('jenis_kelamin')}});
-                $('select[name="agama"]').val({{old('agama')}});
-                $('select[name="status_perkawinan"]').val({{old('status_perkawinan')}});
-                $('select[name="pekerjaan"]').val({{old('pekerjaan')}});
-                $('textarea[name="alamat"]').html({{old('alamat')}});
-                $('select[name="provinsi"]').val({{old('provinsi')}});
-                $('select[name="kabupaten"]').val({{old('kabupaten')}});
-                $('select[name="kecamatan"]').val({{old('kecamatan')}});
-                $('select[name="desa"]').val({{old('desa')}});
-                $('input[name="dusun"]').val({{old('dusun')}});
-                $('input[name="rt"]').val({{old('rt')}});
-                $('input[name="rw"]').val({{old('rw')}});
-                $('input[name="kode_pos"]').val({{old('kode_post')}});
-                $('input[name="no_hp"]').val({{old('no_hp')}});
-                $('input[name="status_pendudukan"]').val({{old('status_pendudukan')}});
+                $('input[name="nkk"]').val("{{old('nkk')}}");
+                $('input[name="nik"]').val("{{old('nik')}}");
+                $('input[name="nama"]').val("{{old('nama')}}");
+                $('input[name="tempat_lahir"]').val("{{old('tempat_lahir')}}");
+                $('input[name="tanggal_lahir"]').val("{{old('tanggal_lahir')}}");
+                $('select[name="jenis_kelamin"]').val("{{old('jenis_kelamin')}}");
+                $('select[name="agama"]').val("{{old('agama')}}");
+                $('select[name="status_perkawinan"]').val("{{old('status_perkawinan')}}");
+                $('select[name="pekerjaan"]').val("{{old('pekerjaan')}}");
+                $('textarea[name="alamat"]').html("{{old('alamat')}}");
+                $('select[name="provinsi"]').val("{{old('provinsi')}}");
+                $('select[name="kabupaten"]').val("{{old('kabupaten')}}");
+                $('select[name="kecamatan"]').val("{{old('kecamatan')}}");
+                $('select[name="desa"]').val("{{old('desa')}}");
+                $('input[name="dusun"]').val("{{old('dusun')}}");
+                $('input[name="rt"]').val("{{old('rt')}}");
+                $('input[name="rw"]').val("{{old('rw')}}");
+                $('input[name="kode_pos"]').val("{{old('kode_post')}}");
+                $('input[name="no_hp"]').val("{{old('no_hp')}}");
+                $('input[name="status_pendudukan"]').val("{{old('status_pendudukan')}}");
             });
 
             $('#editpenduduk*').click(function () {

@@ -50,7 +50,7 @@
                             Overview
                         </div>
                         <h2 class="page-title">
-                            Home
+                            Login User Pemilih
                         </h2>
                     </div>
                 </div>
@@ -60,22 +60,37 @@
             <div class="container-xl">
                 <div class="row">
                     <div class="col-lg-6">
-                        <form action="{{route('home.pencarian')}}" method="get">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="mb-3">
-                                        <div class="form-label">Nama</div>
-                                        <input type="text" name="nama" class="form-control" autocomplete="off" />
+                        <form class="card card-md" action="{{route('loginuser.post')}}" method="POST" autocomplete="off">
+                            @csrf
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label class="form-label">Username</label>
+                                    <input type="text" class="form-control @error('username') is-invalid @enderror" name="username" placeholder="Enter your username" value="{{old('username')}}">
+                                    @error('username')<div class="invalid-feedback">{{ $message }}</div> @enderror
+                                </div>
+                                <div class="mb-2">
+                                    <label class="form-label">
+                                        Password
+                                    </label>
+                                    <div class="input-group input-group-flat">
+                                        <input type="password" class="form-control @error('password') is-invalid @enderror" placeholder="Password" name="password" autocomplete="off">
+                                        <span class="input-group-text">
+                                            <a href="#" class="link-secondary" title="Show password" data-bs-toggle="tooltip">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                                                    viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                                    stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                                    <circle cx="12" cy="12" r="2" />
+                                                    <path
+                                                        d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7" />
+                                                    </svg>
+                                            </a>
+                                        </span>
+                                        @error('password')<div class="invalid-feedback">{{ $message }}</div> @enderror
                                     </div>
-                                    <div class="mb-3">
-                                        <div class="form-label">NIK</div>
-                                        <input type="text" class="form-control" name="nik" autocomplete="off">
-                                    </div>
-                                    <div class="mt-2">
-                                        <button type="submit" class="btn btn-primary">
-                                            Search
-                                        </button>
-                                    </div>
+                                </div>
+                                <div class="form-footer">
+                                    <button type="submit" class="btn btn-primary w-100">Sign in</button>
                                 </div>
                             </div>
                         </form>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Auth\Admin;
+namespace App\Http\Controllers\Auth\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -15,11 +15,11 @@ class LoginController extends Controller
 
     public function form()
     {
-        if (Auth::guard('admin')->check()) {
-            return redirect(route('dashboard'));
+        if (Auth::guard('user')->check()) {
+            return redirect(route('voterlist'));
         }
-        $title = "Login - Admin Page";
-        return view('admin.auth', compact('title'));
+        $title = "Login - Daftar Pemilih";
+        return view('user.auth', compact('title'));
     }
 
     public function login(Request $request)
@@ -31,8 +31,8 @@ class LoginController extends Controller
 
         $credentials = ['username' => $request->username, 'password' => $request->password];
 
-        if (Auth::guard('admin')->attempt($credentials))
-            return redirect()->route('dashboard');
+        if (Auth::guard('user')->attempt($credentials))
+            return redirect()->route('voterlist');
 
         return redirect()->route('login.form')->with(['error' => "Passwords and usernames don't match"]);
     }

@@ -8,7 +8,7 @@ use App\Models\DetailPenduduk;
 use App\Models\Penduduk;
 use Illuminate\Http\Request;
 
-class DataPindahPendudukController extends Controller
+class DataPindahPendudukController extends AppController
 {
     public function index()
     {

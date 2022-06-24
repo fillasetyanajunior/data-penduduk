@@ -4,7 +4,7 @@
 <div class="page page-center">
     <div class="container-tight py-4">
         <div class="text-center mb-4">
-            <a href="" class="navbar-brand navbar-brand-autodark"><img src="{{url('dist/img/pendudukdesa.png')}}" height="40" alt=""></a>
+            <a href="" class="navbar-brand navbar-brand-autodark"><img src="{{url('dist/img/pendudukdesa.png')}}" height="150" alt=""></a>
         </div>
         @if (Session::get('error'))
         <div class="alert alert-fill alert-danger alert-dismissible">

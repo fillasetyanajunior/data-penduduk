@@ -8,7 +8,7 @@ use App\Models\DetailPenduduk;
 use App\Models\Penduduk;
 use Illuminate\Http\Request;
 
-class DataKematianPendudukController extends Controller
+class DataKematianPendudukController extends AppController
 {
     public function index()
     {
